@@ -129,6 +129,25 @@
 </head>
 
 <body>
+    <h1>点击下方按钮播放音乐</h1>
+
+    <!-- 播放按钮 -->
+    <button id="play-button">点击播放音乐</button>
+  
+    <!-- 音频元素 -->
+    <audio id="background-music" loop>
+      <source src="https://sf5-hl-cdn-tos.douyinstatic.com/obj/ies-music/7018438708277889828.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+        const playButton = document.getElementById('play-button');
+        const audio = document.getElementById('background-music');
+    
+        playButton.addEventListener('click', function() {
+          audio.play();
+        });
+      </script>
+
     <canvas id="pinkboard" width="1920" height="947"></canvas>
 
     <canvas id="canvas" width="1920" height="947"></canvas>
